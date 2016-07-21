@@ -13,10 +13,12 @@
 
 int main(int argc, char *argv[])
 {
+    Select_dev();
     delete_cookie_fuc();
     Call_Device(&dev);
     Pcap_init(&dev,&handle);
     pcap_loop(handle,-1, p_packet, NULL);
+
 
 }
 
